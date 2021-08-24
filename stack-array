@@ -1,0 +1,93 @@
+Stack Using Array ->
+-----------------------------------------
+#include<stdio.h>
+#include<conio.h>
+#define N 5
+int top=-1;
+int stack[N]; 
+void push();void pop();void peek();void display();
+void main()
+{
+	int ch;
+	clrscr();
+	do
+	{
+		printf("Enter Your Choice: 1:push 2:pop 3:peek 4:display");
+		scanf("%d",&ch);
+		switch(ch)
+		{
+		case 1:push();
+		break;
+		case 2:pop();
+		break;
+		case 3:peek();
+		break;
+		case 4:display();
+		break;
+		default:printf("invalid choice");
+      }}while(ch!=0);
+	getch();
+}
+void push()  // push function used for insert data
+{
+	int x;
+	printf("enter data");
+	scanf("%d",&x);
+	if(top==N-1)
+	{
+	printf("overflow");
+	}
+	else
+	{
+	top++;
+	stack[top]=x;
+	}
+}
+void pop() // pop function used for delete data
+{
+	int item;
+	if(top==-1)
+	{
+	printf("underflow");
+	}
+	else
+	{
+	item=stack[top];
+	top--;  printf("%d",item);
+	}
+}
+void peek() //peek used to display top value
+{
+	if(top==-1)
+	{
+	printf("overflow");
+	}
+	else
+	{
+	printf("%d",stack[top]);
+	}
+}
+void display() // display all value 
+{
+	 int i;
+	 for(i=top;i>=0;i--)
+	 {
+		printf("%d",stack[i]);
+	 }
+}
+
+Output-
+Enter Your choice: 1:push 2:pop 3:peek 4:display 1<-
+Enter data: 11
+Enter Your choice: 1:push 2:pop 3:peek 4:display 1<-
+Enter data: 21
+Enter Your choice: 1:push 2:pop 3:peek 4:display 1<-
+Enter data: 31
+Enter Your choice: 1:push 2:pop 3:peek 4:display 4<-
+31 21 11
+Enter Your choice: 1:push 2:pop 3:peek 4:display 2<-
+31
+Enter Your choice: 1:push 2:pop 3:peek 4:display 3<-
+21
+Enter Your choice: 1:push 2:pop 3:peek 4:display 4<-
+21 11
