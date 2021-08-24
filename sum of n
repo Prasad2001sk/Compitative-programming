@@ -25,3 +25,11 @@ int main(void) {
     
 	return 0;
 }
+
+
+INPUT
+N = 3
+Array = 6 3 8
+
+OUTPUT
+17
